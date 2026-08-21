@@ -6,8 +6,6 @@ symbol uses across a repeated pass pipeline, on shapes that each isolate one
 real cost driver, and compares design points (with/without the
 `SymbolUserTypeInterface`, and different placements of a containment cache).
 
-Strangers reproduce the numbers; they don't take them on faith.
-
 ## Quickstart (three commands)
 
     ./generate.sh                     # write the benchmark shapes (deterministic, ~seconds, no mlir-opt)
