@@ -1,0 +1,8 @@
+# Benchmark shapes. Tab-separated: name  generator(or STATIC)  params  N_lo  N_hi  phenomenon
+# N_lo/N_hi are canonicalize-pass counts; steady-state Ir/pass = (Ir(N_hi)-Ir(N_lo))/(N_hi-N_lo).
+# Every canonicalize pass re-runs full verification, so per-pass isolates the warm regime.
+wide-signatures-40k	gen_circt_shaped.py	--funcs 20000 --sig-width 6 --types 1400 --attrs-per-op 2 --symbol-density 0.02	1	21	Rich function signatures from a large shared type pool: many distinct-type containment probes per pass.
+large-500k	gen_circt_shaped.py	--funcs 50000 --sig-width 6 --body-ops 8 --types 1400 --attrs-per-op 2 --symbol-density 0.02	1	11	CIRCT-scale (~500k ops) with live body casts: the size where parse and rewrite dominate end-to-end wall.
+scope-heavy	gen_scope_heavy.py	--scopes 640 --funcs-per-scope 32 --sig-width 6 --types 300 --attrs-per-op 2 --symbol-density 0.02	1	21	640 nested symbol-table scopes drawing from one shared type pool: separates a context-wide cache from a per-scope one.
+properties-dense	gen_props.py	10000	1	21	10k LLVM-dialect functions whose ops all carry inherent properties: exercises the properties-held attribute path.
+dictionary-heavy	STATIC	published_repro.mlir	1	41	A 4000-function distinct-per-op-dictionary shape modeled on the PR's 8000-function reproducer (half scale to keep the checkout small); reproduces the same cost driver (large DISTINCT-per-op attribute dictionaries defeat cross-op sharing, so only cross-pass amortization helps), not the PR's absolute published timings.

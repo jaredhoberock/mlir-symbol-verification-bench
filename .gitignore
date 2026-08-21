@@ -1,0 +1,10 @@
+# Built binaries are never committed -- each is a multi-hundred-MB design point.
+# Build them per DESIGN_POINTS.md and drop/symlink them here (or pass a path to
+# bench.sh).
+/binaries/
+# Generated shapes are reproduced deterministically by ./generate.sh; only the
+# static published repro and the pinned checksums are tracked.
+/shapes/*.mlir
+!/shapes/published_repro.mlir
+/shapes/*.info
+*.cg

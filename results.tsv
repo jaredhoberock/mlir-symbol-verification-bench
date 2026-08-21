@@ -1,0 +1,71 @@
+date	label	shape	metric	N	raw	spread	note
+2026-08-21T20:15:56Z	pre-interface	wide-signatures-40k	wall_s	21	0.6400	0.6000..0.6600	iters=7
+2026-08-21T20:15:56Z	pre-interface	wide-signatures-40k	maxrss_mb	21	126.0		iters=7
+2026-08-21T20:15:56Z	pre-interface	large-500k	wall_s	11	3.8100	3.7900..4.0200	iters=7
+2026-08-21T20:15:56Z	pre-interface	large-500k	maxrss_mb	11	397.1		iters=7
+2026-08-21T20:15:56Z	pre-interface	scope-heavy	wall_s	21	0.6300	0.6100..0.6500	iters=7
+2026-08-21T20:15:56Z	pre-interface	scope-heavy	maxrss_mb	21	126.4		iters=7
+2026-08-21T20:15:56Z	pre-interface	properties-dense	wall_s	21	1.1100	1.0600..1.1500	iters=7
+2026-08-21T20:15:56Z	pre-interface	properties-dense	maxrss_mb	21	109.9		iters=7
+2026-08-21T20:15:56Z	pre-interface	dictionary-heavy	wall_s	41	0.3100	0.3000..0.3100	iters=7
+2026-08-21T20:15:56Z	pre-interface	dictionary-heavy	maxrss_mb	41	131.4		iters=7
+2026-08-21T20:15:56Z	pre-interface	wide-signatures-40k	ir_per_pass	1:21	281845219		callgrind
+2026-08-21T20:15:56Z	pre-interface	scope-heavy	ir_per_pass	1:21	299872648		callgrind
+2026-08-21T20:15:56Z	pre-interface	properties-dense	ir_per_pass	1:21	667595450		callgrind
+2026-08-21T20:15:56Z	pre-interface	dictionary-heavy	ir_per_pass	1:41	61815100		callgrind
+2026-08-21T20:17:51Z	upstream-main	wide-signatures-40k	wall_s	21	1.9700	1.9300..1.9800	iters=7
+2026-08-21T20:17:51Z	upstream-main	wide-signatures-40k	maxrss_mb	21	125.7		iters=7
+2026-08-21T20:17:51Z	upstream-main	large-500k	wall_s	11	7.3800	7.3100..7.7900	iters=7
+2026-08-21T20:17:51Z	upstream-main	large-500k	maxrss_mb	11	396.1		iters=7
+2026-08-21T20:17:51Z	upstream-main	scope-heavy	wall_s	21	2.1000	2.0700..2.1200	iters=7
+2026-08-21T20:17:51Z	upstream-main	scope-heavy	maxrss_mb	21	126.7		iters=7
+2026-08-21T20:17:51Z	upstream-main	properties-dense	wall_s	21	1.9000	1.8400..1.9600	iters=7
+2026-08-21T20:17:51Z	upstream-main	properties-dense	maxrss_mb	21	110.3		iters=7
+2026-08-21T20:17:51Z	upstream-main	dictionary-heavy	wall_s	41	1.0300	1.0200..1.0400	iters=7
+2026-08-21T20:17:51Z	upstream-main	dictionary-heavy	maxrss_mb	41	131.6		iters=7
+2026-08-21T20:17:51Z	upstream-main	wide-signatures-40k	ir_per_pass	1:21	1587557896		callgrind
+2026-08-21T20:17:51Z	upstream-main	scope-heavy	ir_per_pass	1:21	1596856084		callgrind
+2026-08-21T20:17:51Z	upstream-main	properties-dense	ir_per_pass	1:21	1461987844		callgrind
+2026-08-21T20:17:51Z	upstream-main	dictionary-heavy	ir_per_pass	1:41	332979488		callgrind
+2026-08-21T20:21:59Z	no-cache	wide-signatures-40k	wall_s	21	0.7900	0.7500..0.8100	iters=7
+2026-08-21T20:21:59Z	no-cache	wide-signatures-40k	maxrss_mb	21	125.8		iters=7
+2026-08-21T20:21:59Z	no-cache	large-500k	wall_s	11	4.1900	4.0300..4.2400	iters=7
+2026-08-21T20:21:59Z	no-cache	large-500k	maxrss_mb	11	396.7		iters=7
+2026-08-21T20:21:59Z	no-cache	scope-heavy	wall_s	21	1.0200	0.9900..1.0300	iters=7
+2026-08-21T20:21:59Z	no-cache	scope-heavy	maxrss_mb	21	126.5		iters=7
+2026-08-21T20:21:59Z	no-cache	properties-dense	wall_s	21	1.2300	1.1800..1.2700	iters=7
+2026-08-21T20:21:59Z	no-cache	properties-dense	maxrss_mb	21	110.6		iters=7
+2026-08-21T20:21:59Z	no-cache	dictionary-heavy	wall_s	41	0.9300	0.9000..0.9600	iters=7
+2026-08-21T20:21:59Z	no-cache	dictionary-heavy	maxrss_mb	41	131.2		iters=7
+2026-08-21T20:21:59Z	no-cache	wide-signatures-40k	ir_per_pass	1:21	372330643		callgrind
+2026-08-21T20:21:59Z	no-cache	scope-heavy	ir_per_pass	1:21	521006197		callgrind
+2026-08-21T20:21:59Z	no-cache	properties-dense	ir_per_pass	1:21	801133856		callgrind
+2026-08-21T20:21:59Z	no-cache	dictionary-heavy	ir_per_pass	1:41	175093162		callgrind
+2026-08-21T20:24:12Z	verifier-scoped	wide-signatures-40k	wall_s	21	0.7400	0.7000..0.7600	iters=7
+2026-08-21T20:24:12Z	verifier-scoped	wide-signatures-40k	maxrss_mb	21	126.3		iters=7
+2026-08-21T20:24:12Z	verifier-scoped	large-500k	wall_s	11	4.1300	4.1100..4.2800	iters=7
+2026-08-21T20:24:12Z	verifier-scoped	large-500k	maxrss_mb	11	397.0		iters=7
+2026-08-21T20:24:12Z	verifier-scoped	scope-heavy	wall_s	21	1.0000	0.9600..1.0100	iters=7
+2026-08-21T20:24:12Z	verifier-scoped	scope-heavy	maxrss_mb	21	126.6		iters=7
+2026-08-21T20:24:12Z	verifier-scoped	properties-dense	wall_s	21	1.2300	1.1900..1.2500	iters=7
+2026-08-21T20:24:12Z	verifier-scoped	properties-dense	maxrss_mb	21	110.0		iters=7
+2026-08-21T20:24:12Z	verifier-scoped	dictionary-heavy	wall_s	41	0.7300	0.7100..0.7500	iters=7
+2026-08-21T20:24:12Z	verifier-scoped	dictionary-heavy	maxrss_mb	41	131.7		iters=7
+2026-08-21T20:24:12Z	verifier-scoped	wide-signatures-40k	ir_per_pass	1:21	358153603		callgrind
+2026-08-21T20:24:12Z	verifier-scoped	scope-heavy	ir_per_pass	1:21	486758779		callgrind
+2026-08-21T20:24:12Z	verifier-scoped	properties-dense	ir_per_pass	1:21	777645147		callgrind
+2026-08-21T20:24:12Z	verifier-scoped	dictionary-heavy	ir_per_pass	1:41	170186115		callgrind
+2026-08-21T20:26:21Z	context-cache	wide-signatures-40k	wall_s	21	0.7300	0.7000..0.7500	iters=7
+2026-08-21T20:26:21Z	context-cache	wide-signatures-40k	maxrss_mb	21	127.3		iters=7
+2026-08-21T20:26:21Z	context-cache	large-500k	wall_s	11	4.2700	4.0300..4.6000	iters=7
+2026-08-21T20:26:21Z	context-cache	large-500k	maxrss_mb	11	401.6		iters=7
+2026-08-21T20:26:21Z	context-cache	scope-heavy	wall_s	21	0.7200	0.6800..0.7400	iters=7
+2026-08-21T20:26:21Z	context-cache	scope-heavy	maxrss_mb	21	127.4		iters=7
+2026-08-21T20:26:21Z	context-cache	properties-dense	wall_s	21	1.2400	1.1900..1.2800	iters=7
+2026-08-21T20:26:21Z	context-cache	properties-dense	maxrss_mb	21	110.4		iters=7
+2026-08-21T20:26:21Z	context-cache	dictionary-heavy	wall_s	41	0.3300	0.3200..0.3400	iters=7
+2026-08-21T20:26:21Z	context-cache	dictionary-heavy	maxrss_mb	41	135.8		iters=7
+2026-08-21T20:26:21Z	context-cache	wide-signatures-40k	ir_per_pass	1:21	328933837		callgrind
+2026-08-21T20:26:21Z	context-cache	scope-heavy	ir_per_pass	1:21	349788646		callgrind
+2026-08-21T20:26:21Z	context-cache	properties-dense	ir_per_pass	1:21	779142888		callgrind
+2026-08-21T20:26:21Z	context-cache	dictionary-heavy	ir_per_pass	1:41	68305262		callgrind
