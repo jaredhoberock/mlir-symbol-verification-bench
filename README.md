@@ -13,7 +13,8 @@ real cost driver, and compares design points (with/without the
     ./report.sh                       # print the comparison across everything measured so far
 
 Run `./bench.sh` once per design point you want to compare (see
-`DESIGN_POINTS.md` for what to build and label each). Example:
+`DESIGN_POINTS.md` for what to build and label each). To measure a subset of
+shapes, set `SHAPES_ONLY="wide-struct-reuse" ./bench.sh ...`. Example:
 
     ./bench.sh ~/llvm/build-A/bin/mlir-opt context-cache
     ./bench.sh ~/llvm/build-B/bin/mlir-opt pre-interface

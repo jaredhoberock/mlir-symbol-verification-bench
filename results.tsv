@@ -69,3 +69,18 @@ date	label	shape	metric	N	raw	spread	note
 2026-08-21T20:26:21Z	context-cache	scope-heavy	ir_per_pass	1:21	349788646		callgrind
 2026-08-21T20:26:21Z	context-cache	properties-dense	ir_per_pass	1:21	779142888		callgrind
 2026-08-21T20:26:21Z	context-cache	dictionary-heavy	ir_per_pass	1:41	68305262		callgrind
+2026-09-04T00:47:12Z	pre-interface	wide-struct-reuse	wall_s	11	1.1700	1.1700..1.2000	iters=7
+2026-09-04T00:47:12Z	pre-interface	wide-struct-reuse	maxrss_mb	11	79.1		iters=7
+2026-09-04T00:47:12Z	pre-interface	wide-struct-reuse	ir_per_pass	1:11	164677673		callgrind
+2026-09-04T00:49:06Z	upstream-main	wide-struct-reuse	wall_s	11	3.8000	3.7200..3.8600	iters=7
+2026-09-04T00:49:06Z	upstream-main	wide-struct-reuse	maxrss_mb	11	79.1		iters=7
+2026-09-04T00:49:06Z	upstream-main	wide-struct-reuse	ir_per_pass	1:11	5999408363		callgrind
+2026-09-04T00:54:42Z	no-cache	wide-struct-reuse	wall_s	11	1.2000	1.2000..1.2500	iters=7
+2026-09-04T00:54:42Z	no-cache	wide-struct-reuse	maxrss_mb	11	78.6		iters=7
+2026-09-04T00:54:42Z	no-cache	wide-struct-reuse	ir_per_pass	1:11	183518780		callgrind
+2026-09-04T00:56:37Z	verifier-scoped	wide-struct-reuse	wall_s	11	1.1800	1.1600..1.1900	iters=7
+2026-09-04T00:56:37Z	verifier-scoped	wide-struct-reuse	maxrss_mb	11	79.0		iters=7
+2026-09-04T00:56:37Z	verifier-scoped	wide-struct-reuse	ir_per_pass	1:11	182019025		callgrind
+2026-09-04T00:58:31Z	context-cache	wide-struct-reuse	wall_s	11	1.1800	1.1700..1.2700	iters=7
+2026-09-04T00:58:31Z	context-cache	wide-struct-reuse	maxrss_mb	11	79.2		iters=7
+2026-09-04T00:58:31Z	context-cache	wide-struct-reuse	ir_per_pass	1:11	180747723		callgrind

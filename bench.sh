@@ -21,6 +21,7 @@ emit(){ printf '%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\n' "$DATE" "$LABEL" "$1" "$2" "$3
 nhi(){ awk -F'\t' -v n="$1" '$1==n{print $5}' shapes.txt; }
 nlo(){ awk -F'\t' -v n="$1" '$1==n{print $4}' shapes.txt; }
 SHAPES=$(grep -v '^#' shapes.txt | cut -f1)
+[ -n "${SHAPES_ONLY:-}" ] && SHAPES="$SHAPES_ONLY"   # measure a subset: SHAPES_ONLY="a b" ./bench.sh ...
 echo "== '$LABEL'  ($MO) =="
 for s in $SHAPES; do
   h=$(nhi "$s"); pp=$(pipe "$h"); ws=""; rs=""

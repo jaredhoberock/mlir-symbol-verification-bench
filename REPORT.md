@@ -113,7 +113,26 @@ retired instructions per verification pass. Threading disabled throughout.
     context-cache         68.3 M   0.21x  containment cache owned by MLIRContext (the PR)
     reviewer: pre-interface 61.8M -> main 333.0M = 5.39x regression (ABOVE 3x) -> context-cache 68.3M; recovery vs floor = 98%
 
+### wide-struct-reuse
+  One 4096-field LLVM struct used at three positions of every op in a 49k-line function: isolates re-walking one wide type per use (the shape of the reproducer posted on the PR); a verifier that memoizes the type pays its width once.
+
+  WALL  (N=11; lower is better)
+    pre-interface        1.170 s   0.31x  before SymbolUserTypeInterface (upstream main post-revert #217959)  [1.1700..1.2000]
+    upstream-main        3.800 s   1.00x  with the interface = the #198435 regression (baseline)  [3.7200..3.8600]
+    no-cache             1.200 s   0.32x  PR walker only, no containment cache  [1.2000..1.2500]
+    verifier-scoped      1.180 s   0.31x  containment cache owned per verifier scope  [1.1600..1.1900]
+    context-cache        1.180 s   0.31x  containment cache owned by MLIRContext (the PR)  [1.1700..1.2700]
+    reviewer: pre-interface 1.170s -> main 3.800s = 3.25x regression (ABOVE 3x) -> context-cache 1.180s; recovery vs floor = 100%
+  MaxRSS: pre-interface=79MB  upstream-main=79MB  no-cache=79MB  verifier-scoped=79MB  context-cache=79MB
+
+  IR  (N=1:11; lower is better)
+    pre-interface        164.7 M   0.03x  before SymbolUserTypeInterface (upstream main post-revert #217959)
+    upstream-main       5999.4 M   1.00x  with the interface = the #198435 regression (baseline)
+    no-cache             183.5 M   0.03x  PR walker only, no containment cache
+    verifier-scoped      182.0 M   0.03x  containment cache owned per verifier scope
+    context-cache        180.7 M   0.03x  containment cache owned by MLIRContext (the PR)
+    reviewer: pre-interface 164.7M -> main 5999.4M = 36.43x regression (ABOVE 3x) -> context-cache 180.7M; recovery vs floor = 100%
+
 ==============================================================================
 Every number traces to a row in results.tsv. Ir on large-500k is omitted
 (callgrind ~10-min pole); its story is in the wall row.
-```
